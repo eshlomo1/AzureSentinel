@@ -5,15 +5,15 @@ union isfuzzy=true withsource = tt *
 | where _IsBillable == True
 | where tt in
 (
-"Perf", "Event", "DeviceEvents", " SecurityEvent", " DeviceNetworkEvents",
-"DeviceFileEvents", " DeviceProcessEvents", " DeviceFileCertificateInfo", " SecurityRegulatoryCompliance",
-"AADNonInteractiveUserSignInLogs", " AzureActivity", " DeviceRegistryEvents", " DeviceNetworkInfo",
-"ADCSV_CL", " AD_Metadata_CL", " DeviceImageLoadEvents", " Usage", " OfficeActivity", " Operation",
-" Heartbeat", " DeviceInfo", " DeviceLogonEvents", " SigninLogs", " DnsEvents", " SecurityBaseline",
-" UserPeerAnalytics", " AuditLogs", " SecurityRecommendation", " SecurityAlert", " UserAccessAnalytics",
-"SecurityIncident", " AADManagedIdentitySignInLogs", " ADDS_Metadata_CL", " SecureScores",
-" Update", " SecurityNestedRecommendation", " SecureScoreControls", " DnsInventory", " ProtectionStatus",
-"SecurityDetection", " AADServicePrincipalSignInLogs", " ComputerGroup", " UpdateSummary", " AD_Metadata1_CL", " SecurityBaselineSummary"
+"Perf", "Event", "DeviceEvents", "SecurityEvent", "DeviceNetworkEvents",
+"DeviceFileEvents", "DeviceProcessEvents", "DeviceFileCertificateInfo", "SecurityRegulatoryCompliance",
+"AADNonInteractiveUserSignInLogs", "AzureActivity", "DeviceRegistryEvents", "DeviceNetworkInfo",
+"ADCSV_CL", "AD_Metadata_CL", "DeviceImageLoadEvents", "Usage", "OfficeActivity", "Operation",
+"Heartbeat", "DeviceInfo", "DeviceLogonEvents", "SigninLogs", "DnsEvents", "SecurityBaseline",
+"UserPeerAnalytics", "AuditLogs", "SecurityRecommendation", "SecurityAlert", "UserAccessAnalytics",
+"SecurityIncident", "AADManagedIdentitySignInLogs", "ADDS_Metadata_CL", "SecureScores",
+"Update", "SecurityNestedRecommendation", "SecureScoreControls", "DnsInventory", "ProtectionStatus",
+"SecurityDetection", "AADServicePrincipalSignInLogs", "ComputerGroup", "UpdateSummary", "AD_Metadata1_CL", "SecurityBaselineSummary"
 )
 | summarize
 TotalGBytes =round( sum(_BilledSize/(1024*1024*1024)),2),
